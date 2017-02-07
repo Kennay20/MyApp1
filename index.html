@@ -21,8 +21,8 @@
    var n1=parseInt($("#num1").val());
    var n2=parseInt($("#num2").val());
    var Suma=n1+n2;
-   alert("El resultado de la suma es:"+Suma);
-
+   //alert("El resultado de la suma es:"+Suma);
+   $("#resultado").val(Suma);
    });
   });
     
@@ -30,7 +30,7 @@
 
 </head>
     <body>
-      <div data-role="page" id="Principal">
+      <div data-role="page" id="Principal" data-theme="a">
       <div data-role="header">
 	    <p> Principal </p>
 </div>
@@ -47,16 +47,21 @@
         <a href="#Suma"data-role="button" data-transition="turn">Calcular Suma</a>
    </div>
        <div data-role="footer">
-<p>Pie de la Aplicacion</p>	
+       <a href="https://www.Facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Facebook</a>
+       <a href="https://www.twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Twitter</a>
+       <a href="https://www.instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-top">Agregar a Instagram</a>
+
       </div>
-     </div>
+    </div>
 
 
 <!--Segunda parte transiciones y botones-->
 
     <div data-role="page" id="Contacto">
         <div data-role="header">
+        <a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left data-transition=""> Principal</a>
             <p> Contacto </p>
+        <a href="#Suma" class="ui-btn ui-icon-plus ui-btn-icon-right" data-transition="flip">Sumar</a>
         </div>
    <div data-role="Content">
             <p> José Angel Bravo Bravo </p>
@@ -76,6 +81,7 @@
         <div data-role="Content">
               <input type="text" id="num1" placeholder="Escribe un numero">
               <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
               <input type="button" id="btnSumar" value="Calcular Suma">
         </div>
         <div data-role="footer">
