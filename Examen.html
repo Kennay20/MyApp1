@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Examen: Primer Parcial</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <!--DOM documnet object model -->
+
+  <script type="text/javascript">
+   $(document).ready(function(){
+   // alert("Hola Mundo");
+   $("#btnSumar").click(function(){
+
+   var n1=parseInt($("#num1").val());
+   var n2=parseInt($("#num2").val());
+   var Suma=n1+n2;
+   //alert("El resultado de la suma es:"+Suma);
+   $("#resultado").val(Suma);
+   });
+
+   $(document).ready(function(){
+   $("#btnRestar").click(function(){
+   var n1=parseInt($("#num1").val());
+   var n2=parseInt($("#num2").val());
+   var Resta=n1-n2;
+   $("#resultado").val(Resta);
+   });
+  
+   $("#btnMultiplicar").click(function(){
+   var n1=parseInt($("#num1").val());
+   var n2=parseInt($("#num2").val());
+   var Multiplicacion=n1*n2;
+   $("#resultado").val(Multiplicacion);
+   });
+
+   $(document).ready(function(){
+   $("#btnDividir").click(function(){
+   var n1=parseInt($("#num1").val());
+   var n2=parseInt($("#num2").val());
+   var Division=n1/n2;
+   $("#resultado").val(Division);
+   });
+
+  </script>
+
+</head>
+    <body>
+      <div data-role="page" id="Principal" data-theme="a">
+      <div data-role="header">
+	    <p> Principal </p>
+</div>
+   <div data-role="Content">
+      <p> Contenido de la aplicacion </p>
+	      <a href="#OperacionesBasicas"data-role="button" data-transition="slide">Operaciones Básicas</a>
+        <a href="#Fibonacci"data-role="button" data-transition="slide">Serie Fibonacci</a>
+        <a href="#Datos"data-role="button" data-transition="slide">Datos del Desarrollador</a>
+
+   </div>
+       <div data-role="footer">
+       
+      </div>
+    </div>
+
+
+<!--Segunda parte transiciones y botones-->
+
+    <div data-role="page" id="OperacionesBasicas">
+        <div data-role="header">
+        </div>
+   <div data-role="Content">
+   <a href="#Suma" data-role="button" data-transition="flow" >Calcular Suma</a>       
+   <a href="#Resta" data-role="button" data-transition="flow" >Calcular Resta</a>    
+   <a href="#Multiplicacion" data-role="button" data-transition="flow" >Calcular Multiplicacion</a>    
+   <a href="#Division" data-role="button" data-transition="flow" >Calcular Division</a>     
+   </div>
+       <div data-role="footer">
+            <p>Pie de la aplicacion</p> 
+   </div>
+   </div>
+
+<div data-role="page" id="Fibonacci">
+        <div data-role="header">
+        </div>
+   <div data-role="Content">     
+              <input type="text" id="num2" placeholder="Ingresa un numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnFibonacci" value="Calcular Serie Fibonacci">
+   </div>
+       <div data-role="footer">
+            <p>Pie de la aplicacion</p> 
+   </div>
+   </div>
+
+   <div data-role="page" id="Datos">
+        <div data-role="header">
+        </div>
+   <div data-role="Content">     
+               <p> José Angel Bravo Bravo </p>
+               <p>13940049</p>
+               <p>282-123-8289</p>
+               <p>blacknuz20@gmail.com</p>
+               <p>Base de Datos Para Dispositivos Moviles</p>
+   </div>
+       <div data-role="footer">
+            <p>Pie de la aplicacion</p> 
+   </div>
+   </div>
+<!--Suma-->
+
+    <div data-role="page" id="Suma">
+    <div data-role="header">
+            <p> Operacion Suma</p>
+    </div>
+        <div data-role="Content">
+              <input type="text" id="num1" placeholder="Escribe un numero">
+              <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnSumar" value="Calcular Suma">
+        </div>
+        <div data-role="footer">
+             <p>Pie de la Aplicacion</p> 
+        </div>
+      </div>
+<!--Resta-->
+  <div data-role="page" id="Resta">
+    <div data-role="header">
+            <p> Operacion Resta</p>
+    </div>
+        <div data-role="Content">
+              <input type="text" id="num1" placeholder="Escribe un numero">
+              <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnRestar" value="Calcular Resta">
+        </div>
+        <div data-role="footer">
+             <p>Pie de la Aplicacion</p> 
+        </div>
+      </div>
+<!--Multiplicar-->
+<div data-role="page" id="Multiplicacion">
+    <div data-role="header">
+            <p> Operacion Multiplicacion</p>
+    </div>
+        <div data-role="Content">
+              <input type="text" id="num1" placeholder="Escribe un numero">
+              <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnMultiplicar" value="Calcular Multiplicacion">
+        </div>
+        <div data-role="footer">
+             <p>Pie de la Aplicacion</p> 
+        </div>
+      </div>
+      <div data-role="page" id="Division">
+    <div data-role="header">
+            <p> Operacion Division</p>
+    </div>
+        <div data-role="Content">
+              <input type="text" id="num1" placeholder="Escribe un numero">
+              <input type="text" id="num2" placeholder="Escribe un segundo numero">
+              <input type="" id="resultado" placeholder="Resultado">
+              <input type="button" id="btnDividir" value="Calcular Division">
+        </div>
+        <div data-role="footer">
+             <p>Pie de la Aplicacion</p> 
+        </div>
+      </div>
+    </body>
+</html>
